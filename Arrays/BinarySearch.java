@@ -26,3 +26,5 @@ public class BinarySearch {
         System.out.println("The key is found at " + ans);
     }
 }
+
+// Note :- Here the Time complexity is 0(log n)

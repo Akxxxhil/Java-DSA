@@ -16,3 +16,5 @@ public class Largest {
         System.out.println("The largest number in the array is " + ans);
     }
 }
+
+// Note :- Here the Time complexity is 0(n)

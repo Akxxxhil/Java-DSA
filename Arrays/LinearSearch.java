@@ -17,3 +17,5 @@ public class LinearSearch {
 
     }
 }
+
+// Note :- Here the Time complexity is 0(n)
