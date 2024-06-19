@@ -3,48 +3,59 @@ public class Basic {
         int data;
         Node next;
 
-        //constructor on Node
+        // constructor on Node
         public Node(int data) {
             this.data = data;
             this.next = null;
         }
     }
+
     public static Node head;
     public static Node tail;
 
-    public void addFirst(int data){
+    public void addFirst(int data) {
         // step;=craete a new Node
-        Node newNode=new Node(data);
+        Node newNode = new Node(data);
 
-        if(head==null){
-            head=tail=newNode;
+        if (head == null) {
+            head = tail = newNode;
             return;
         }
 
-        //step;=making th head point towards this new nodes next
-        newNode.next=head;
+        // step;=making th head point towards this new nodes next
+        newNode.next = head;
 
-        //step:= marking new node as head
-        head=newNode;
+        // step:= marking new node as head
+        head = newNode;
     }
 
-    public void addLast(int data){
-        Node newNode=new Node(data);
-        if(head==null){
-            head=tail=newNode;
+    public void addLast(int data) {
+        Node newNode = new Node(data);
+        if (head == null) {
+            head = tail = newNode;
         }
-        tail.next=newNode;
-        tail=newNode;
+        tail.next = newNode;
+        tail = newNode;
+    }
+
+    public void print() {
+        Node temp = head;
+        while (temp != null) {
+            System.out.print(temp.data + "->");
+            temp = temp.next;
+        }
+        System.out.println("null");
     }
 
     public static void main(String[] args) {
-        //creation of new linked list
-        Basic ll=new Basic();
-        ll.addFirst(1);
+        // creation of new linked list
+        Basic ll = new Basic();
+
         ll.addFirst(2);
+        ll.addFirst(1);
         ll.addLast(3);
         ll.addLast(4);
-
+        ll.print();
 
     }
 }
