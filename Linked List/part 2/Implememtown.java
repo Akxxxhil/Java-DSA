@@ -58,6 +58,25 @@ class NodeList {
         x.next = temp;
 
     }
+    int getAny(int index){
+        if (index >= size || index < 0) {
+            System.out.println("Invalid Index");
+            return -1;
+        }
+        Node temp = head;
+        for (int i = 0; i < index; i++) {
+            temp = temp.next;
+        }
+        return temp.val;
+    }
+
+    void deltedatHead(){
+        if(head==null){
+        System.out.println("Linked list is empty");
+        }
+         head=head.next;
+         size--;
+    }
 
     void printing() {
         Node temp = head;
@@ -87,5 +106,10 @@ public class Implememtown {
         System.out.println();
         a1.insertatany(100,2);
         a1.printing();
+        System.out.println();
+       System.out.println( a1.getAny(3));
+       a1.deltedatHead();
+       a1.printing();
+       
     }
 }
